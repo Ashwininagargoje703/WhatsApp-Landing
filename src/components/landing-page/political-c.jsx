@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Grid, Paper, Typography, useMediaQuery } from "@mui/material";
 
 const data = [
   {
@@ -29,6 +29,8 @@ const data = [
 ];
 
 const Political = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
   return (
     <Grid container spacing={2}>
       {data.map((item, index) => (
@@ -47,7 +49,14 @@ const Political = () => {
             >
               {item.h1}
             </Typography>
-            <Typography variant="body2" mt={1} maxWidth={280}>
+            <Typography
+              variant="body2"
+              mt={1}
+              sx={{
+                textAlign: "center",
+                justifyContent: "center",
+              }}
+            >
               {item.text}
             </Typography>
           </Box>
