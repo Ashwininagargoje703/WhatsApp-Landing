@@ -32,37 +32,43 @@ const Political = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
 
   return (
-    <Grid container spacing={2}>
-      {data.map((item, index) => (
-        <Grid item xs={12} md={6} lg={3} key={index}>
-          <Box p={2}>
-            <img
-              src={item.imgSrc}
-              alt={`Box ${index + 1}`}
-              style={{ maxWidth: "100%", height: "300px" }}
-            />
-            <Typography
-              fontSize={16}
-              fontWeight={600}
-              color={"rgba(72, 229, 130, 1)"}
-              mt={1}
-            >
-              {item.h1}
-            </Typography>
-            <Typography
-              variant="body2"
-              mt={1}
-              sx={{
-                textAlign: "center",
-                justifyContent: "center",
-              }}
-            >
-              {item.text}
-            </Typography>
-          </Box>
-        </Grid>
-      ))}
-    </Grid>
+    <>
+      <Typography variant="h5" fontWeight={600}>
+        Use Cases For Political Campaigns
+      </Typography>
+      <br />
+      <Grid container spacing={2}>
+        {data.map((item, index) => (
+          <Grid item xs={12} md={6} lg={3} key={index}>
+            <Box p={2}>
+              <img
+                src={item.imgSrc}
+                alt={`Box ${index + 1}`}
+                style={{ maxWidth: "100%", height: "300px" }}
+              />
+              <Typography
+                fontSize={16}
+                fontWeight={600}
+                color={"rgba(72, 229, 130, 1)"}
+                mt={1}
+              >
+                {item.h1}
+              </Typography>
+              <Typography
+                variant="body2"
+                mt={1}
+                sx={{
+                  textAlign: "center",
+                  justifyContent: "center",
+                }}
+              >
+                {item.text}
+              </Typography>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+    </>
   );
 };
 

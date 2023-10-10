@@ -22,33 +22,38 @@ const data = [
   },
 ];
 
-const ThreeBoxRow = () => {
+const SliderComponent = () => {
   return (
-    <Grid container spacing={2}>
-      {data.map((item, index) => (
-        <Grid item xs={12} sm={4} key={index}>
-          <Box p={2} minHeight={250}>
-            <img
-              src={item.imgSrc}
-              alt={`Box ${index + 1}`}
-              style={{ maxWidth: "100%", height: "300px" }}
-            />
-            <Typography
-              fontSize={16}
-              fontWeight={600}
-              color={"rgba(72, 229, 130, 1)"}
-              mt={1}
-            >
-              {item.h1}
-            </Typography>
-            <Typography variant="body2" mt={1}>
-              {item.text}
-            </Typography>
-          </Box>
-        </Grid>
-      ))}
-    </Grid>
+    <>
+      <Typography variant="h5" fontWeight={600}>
+        For Retail Businesses
+      </Typography>
+      <Grid container spacing={2}>
+        {data.map((item, index) => (
+          <Grid item xs={12} sm={4} key={index}>
+            <Box p={2} minHeight={250}>
+              <img
+                src={item.imgSrc}
+                alt={`Box ${index + 1}`}
+                style={{ maxWidth: "100%", height: "300px" }}
+              />
+              <Typography
+                fontSize={16}
+                fontWeight={600}
+                color={"rgba(72, 229, 130, 1)"}
+                mt={1}
+              >
+                {item.h1}
+              </Typography>
+              <Typography variant="body2" mt={1}>
+                {item.text}
+              </Typography>
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+    </>
   );
 };
 
-export default ThreeBoxRow;
+export default SliderComponent;
