@@ -6,7 +6,6 @@ import Political from "./components/landing-page/political-c";
 import ContinuousSlider from "./components/landing-page/services-slider";
 import Contact from "./components/landing-page/contact";
 import SliderComponent from "./components/landing-page/slider";
-import { Link, Element } from "react-scroll";
 import { Box } from "@mui/material";
 
 function App() {

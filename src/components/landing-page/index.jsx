@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Box, Button, TextField, useMediaQuery } from "@mui/material";
-import SliderComponent from "./slider";
-import ContinuousSlider from "./services-slider";
-import Political from "./political-c";
-import Contact from "./contact";
 
 function LandingPage() {
   const isMobile = useMediaQuery("(max-width: 600px)");
