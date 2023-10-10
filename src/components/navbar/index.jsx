@@ -21,7 +21,7 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ width: "100vw" }}>
+    <Box onClick={handleDrawerToggle} sx={{ width: "105vw" }}>
       <Divider />
       <List>
         <Box display={"grid"} mt={5} gap={4}>
