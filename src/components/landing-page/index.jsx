@@ -109,7 +109,7 @@ function LandingPage() {
         <img
           src="https://i.ibb.co/fNYcx88/Whats-App-Image-2023-10-11-at-11-34-50-AM-removebg-preview.png"
           alt="WhatsApp Bot Image"
-          style={{ maxWidth: "100%", height: 500 }}
+          style={{ maxWidth: "100%", height: 400 }}
         />
       </Grid>
     </Grid>
