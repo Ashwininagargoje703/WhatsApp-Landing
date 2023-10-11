@@ -12,27 +12,27 @@ import {
 
 const Data = [
   {
-    img: "https://i.ibb.co/9VscJ0v/Whats-App-Image-2023-10-07-at-7-20-46-PM.jpg",
+    img: "https://i.ibb.co/KXJHQ9Y/Whats-App-Image-2023-10-11-at-3-41-20-PM-removebg-preview.png",
     title: "Tailored Solutions",
     content: "Customized to your unique needs.",
   },
   {
-    img: "https://i.ibb.co/dcC2Wzz/Whats-App-Image-2023-10-07-at-7-22-13-PM.jpg",
+    img: "https://i.ibb.co/4YvxZT3/Whats-App-Image-2023-10-11-at-3-41-28-PM-removebg-preview-1.png",
     title: "Effortless Automation",
     content: "Free up time for what matters most",
   },
   {
-    img: "https://i.ibb.co/myMdN4L/Whats-App-Image-2023-10-07-at-7-22-18-PM.jpg",
+    img: "https://i.ibb.co/B4fW8mK/Whats-App-Image-2023-10-11-at-3-41-36-PM-removebg-preview.png",
     title: "Personalized Engagement",
     content: "Boost customer/voter engagement.",
   },
   {
-    img: "https://i.ibb.co/W5dyVHw/Whats-App-Image-2023-10-07-at-7-22-25-PM.jpg",
+    img: "https://i.ibb.co/qR5cpHK/Whats-App-Image-2023-10-11-at-3-41-46-PM-removebg-preview.png",
     title: "Always Available",
     content: "24/7 access to info and assistance.",
   },
   {
-    img: "https://i.ibb.co/T0ZXyM6/Whats-App-Image-2023-10-07-at-7-22-30-PM.jpg",
+    img: "https://i.ibb.co/TMMH03D/Whats-App-Image-2023-10-11-at-3-41-54-PM-removebg-preview.png",
     title: "Data-Driven Insights",
     content: "Make smarter decisions with valuable data.",
   },
@@ -43,7 +43,7 @@ const ContinuousSlider = () => {
 
   return (
     <Container>
-      <Typography variant="h5" fontWeight={600} mt={2}>
+      <Typography variant="h4" color={"#004c3d"} fontWeight={600} mt={2}>
         Features of our WhatsApp Bot Services
       </Typography>
       <br />
@@ -70,7 +70,7 @@ const ContinuousSlider = () => {
               style={{ maxWidth: "100px", maxHeight: "100px" }}
             />
             <CardContent>
-              <Typography variant="h6" color={"rgba(72, 229, 130, 1)"}>
+              <Typography variant="h6" color={"#004c3d"} fontWeight={600}>
                 {item.title}
               </Typography>
               <Typography variant="body2">{item.content}</Typography>
@@ -80,12 +80,11 @@ const ContinuousSlider = () => {
       </div>
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: isMobile ? "" : "repeat(2, 1fr)",
+          display: "flex",
           justifyContent: "center",
           textAlign: "center",
-          gap: "16px",
           marginTop: 20,
+          gap: 130,
         }}
       >
         {Data.slice(3).map((item, index) => (
@@ -102,7 +101,7 @@ const ContinuousSlider = () => {
               style={{ maxWidth: "100px", maxHeight: "100px" }}
             />
             <CardContent>
-              <Typography variant="h6" color={"rgba(72, 229, 130, 1)"}>
+              <Typography variant="h6" color={"#004c3d"} fontWeight={600}>
                 {item.title}
               </Typography>
               <Typography variant="body2">{item.content}</Typography>
@@ -139,7 +138,7 @@ const ContinuousSlider = () => {
     //           style={{ maxWidth: "100px", maxHeight: "100px" }}
     //         />
     //         <CardContent>
-    //           <Typography variant="h6" color={"rgba(72, 229, 130, 1)"}>
+    //           <Typography variant="h6" color={"#004c3d"}>
     //             {item.title}
     //           </Typography>
     //           <Typography variant="body2">{item.content}</Typography>
@@ -168,7 +167,7 @@ const ContinuousSlider = () => {
     //           style={{ maxWidth: "100px", maxHeight: "100px" }}
     //         />
     //         <CardContent>
-    //           <Typography variant="h6" color={"rgba(72, 229, 130, 1)"}>
+    //           <Typography variant="h6" color={"#004c3d"}>
     //             {item.title}
     //           </Typography>
     //           <Typography variant="body2">{item.content}</Typography>

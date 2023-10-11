@@ -11,7 +11,7 @@ import { Box } from "@mui/material";
 function App() {
   return (
     <div className="App">
-      <Box sx={{ position: "fixed" }}>
+      <Box sx={{ position: "fixed", zIndex: 999999 }}>
         <SearchAppBar />
       </Box>
       <LandingPage />

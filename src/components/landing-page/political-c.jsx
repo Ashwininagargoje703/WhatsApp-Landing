@@ -33,7 +33,7 @@ const Political = () => {
 
   return (
     <>
-      <Typography variant="h5" fontWeight={600}>
+      <Typography variant="h4" color={"#004c3d"} fontWeight={600}>
         Use Cases For Political Campaigns
       </Typography>
       <br />
@@ -48,8 +48,8 @@ const Political = () => {
               />
               <Typography
                 fontSize={16}
-                fontWeight={600}
-                color={"rgba(72, 229, 130, 1)"}
+                fontWeight={700}
+                color={"#004c3d"}
                 mt={1}
               >
                 {item.h1}

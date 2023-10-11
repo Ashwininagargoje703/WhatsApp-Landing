@@ -10,26 +10,25 @@ const Footer = () => {
   return (
     <footer
       style={{
-        backgroundColor: "rgba(199, 255, 220, 1)",
-        color: "rgba(0, 0, 0, 1)",
+        backgroundColor: "#004c3d",
+        color: "white",
         padding: "5px 0",
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={2} justifyContent={"space-between"}>
+        <Grid container spacing={2} justifyContent={"space-between"} mt={2}>
           <Grid
             item
             xs={12}
             sm={3}
-            mt={2}
             style={{
               textAlign: isMobile ? "center" : "left",
               justifyContent: "center",
             }}
           >
-            <Typography gutterBottom>Case Studies</Typography>
-            <Typography gutterBottom>Blog</Typography>
-            <Typography gutterBottom>Testimonials</Typography>
+            <Typography>Case Studies</Typography>
+            <Typography mt={2}>Blog</Typography>
+            <Typography mt={2}>Testimonials</Typography>
             {/* Add links to your case studies and blog */}
           </Grid>
           <Grid

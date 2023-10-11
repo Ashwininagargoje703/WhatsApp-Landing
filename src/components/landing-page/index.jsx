@@ -7,7 +7,7 @@ function LandingPage() {
   const isMobile = useMediaQuery("(max-width: 600px)");
   const backgroundImageUrl = isMobile
     ? "https://i.ibb.co/8c8tWTy/img-removebg-preview.png"
-    : "https://i.ibb.co/BGDRVcj/Whats-App-Image-2023-10-07-at-6-34-39-PM-removebg-preview.png";
+    : "";
 
   const background = isMobile ? (
     <Grid container>
@@ -28,11 +28,7 @@ function LandingPage() {
         }}
       >
         <Box p={4}>
-          <Typography
-            variant="h5"
-            fontWeight={600}
-            color={"rgba(72, 229, 130, 1)"}
-          >
+          <Typography variant="h5" fontWeight={600} color={"#004c3d"}>
             Elevate Your Campaign or Business with Custom WhatsApp Bots
           </Typography>
           <br />
@@ -57,18 +53,39 @@ function LandingPage() {
           <Typography
             variant="h5"
             fontWeight={600}
-            color={"rgba(72, 229, 130, 1)"}
+            color={"#004c3d"}
+            fontSize={42}
           >
-            Elevate Your Campaign or Business with Custom WhatsApp Bots
+            WhatsApp Bot + Chat GPT
           </Typography>
           <br />
+
+          <Typography fontSize={18}>
+            Elevate Your Campaign or Business with Custom WhatsApp Bots Custom
+          </Typography>
+
+          <br />
+
+          <Button
+            sx={{
+              backgroundColor: "#004c3d",
+              color: "white",
+              textTransform: "none",
+              borderRadius: "19px",
+              p: 1,
+              pl: 4,
+              pr: 4,
+            }}
+          >
+            Contact Us
+          </Button>
         </Box>
       </Grid>
 
       {/* Right Side */}
       <Grid item xs={12} md={6} mt={7}>
         <img
-          src="https://i.ibb.co/b7zTYPT/Whats-App-Image-2023-10-06-at-9-52-40-PM-removebg-preview.png"
+          src="https://i.ibb.co/fNYcx88/Whats-App-Image-2023-10-11-at-11-34-50-AM-removebg-preview.png"
           alt="WhatsApp Bot Image"
           style={{ maxWidth: "100%" }}
         />

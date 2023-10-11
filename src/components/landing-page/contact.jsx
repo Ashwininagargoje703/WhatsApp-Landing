@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Button, Grid, Paper, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  Paper,
+  TextField,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { useState } from "react";
 
 const Contact = () => {
@@ -40,88 +48,116 @@ const Contact = () => {
     setFeedback("");
   };
 
-  return (
-    <Grid
-      item
-      xs={12}
-      sm={3}
-      style={{
-        marginBottom: "20px",
-        justifyContent: "center",
-        textAlign: "center",
-        zIndex: 0,
-      }}
-    >
-      <Typography variant="h6" gutterBottom fontWeight={600}>
-        Form
-      </Typography>
-      <form onSubmit={handleSubmit}>
-        <TextField
-          label="User Name"
-          variant="outlined"
-          size="small"
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
-          required
-          style={{
-            backgroundColor: "white",
-          }}
-        />
-        <br />
-        <br />
-        <TextField
-          label="Email"
-          variant="outlined"
-          size="small"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          style={{
-            backgroundColor: "white",
-          }}
-        />
-        <br />
-        <br />
-        <TextField
-          label="Phone Number"
-          variant="outlined"
-          size="small"
-          value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          required
-          style={{
-            backgroundColor: "white",
-          }}
-        />
-        <br />
-        <br />
-        <TextField
-          label="Feedback"
-          variant="outlined"
-          size="small"
-          value={feedback}
-          onChange={(e) => setFeedback(e.target.value)}
-          required
-          style={{
-            backgroundColor: "white",
-          }}
-        />
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
-        <div>
-          <Button
-            variant="contained"
-            style={{
-              marginTop: "10px",
-              backgroundColor: "rgba(72, 229, 130, 1)",
-              color: "white",
-            }}
-            type="submit"
-          >
-            Submit
-          </Button>
-        </div>
-      </form>
-    </Grid>
+  return (
+    <>
+      <Typography variant="h4" color={"#004c3d"} fontWeight={600}>
+        Contact Us
+      </Typography>
+
+      <Grid container>
+        <Grid item xs={12} md={6} mt={4}>
+          <img
+            src="https://lotusschool.in/wp-content/uploads/2020/01/contactus-768x630.png"
+            alt="WhatsApp Bot Image"
+            style={{ maxWidth: "100%", maxHeight: "80%" }}
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          style={{
+            alignItems: "center",
+            display: "flex",
+            marginTop: isMobile ? "" : -100,
+          }}
+        >
+          <Box p={4}>
+            <form onSubmit={handleSubmit}>
+              <TextField
+                label="User Name (Required)"
+                variant="outlined"
+                size="small"
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+                required
+                style={{
+                  backgroundColor: "white",
+                  width: isMobile ? "" : 550,
+                }}
+              />
+              <br />
+              <br />
+              <TextField
+                label="Email  (Required)"
+                variant="outlined"
+                size="small"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                style={{
+                  backgroundColor: "white",
+                  width: isMobile ? "" : 550,
+                }}
+              />
+              <br />
+              <br />
+              <TextField
+                label="Phone Number  (Required)"
+                variant="outlined"
+                size="small"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                required
+                style={{
+                  backgroundColor: "white",
+                  width: isMobile ? "" : 550,
+                }}
+              />
+              <br />
+              <br />
+              <TextField
+                label="Feedback"
+                variant="outlined"
+                size="small"
+                multiline
+                value={feedback}
+                onChange={(e) => setFeedback(e.target.value)}
+                required
+                style={{
+                  backgroundColor: "white",
+                  width: isMobile ? "100%" : 550,
+                }}
+              />
+
+              <div
+                style={{
+                  marginTop: "20px",
+                }}
+              >
+                <Button
+                  variant="contained"
+                  sx={{
+                    marginTop: "10px",
+                    backgroundColor: "#004c3d",
+                    color: "white",
+                    textTransform: "none",
+                    borderRadius: "19px",
+                    pl: 10,
+                    pr: 10,
+                  }}
+                  type="submit"
+                >
+                  Submit
+                </Button>
+              </div>
+            </form>
+          </Box>
+        </Grid>
+      </Grid>
+    </>
   );
 };
 
