@@ -2,13 +2,16 @@ import "./App.css";
 import LandingPage from "./components/landing-page";
 import Footer from "./components/footer";
 import SearchAppBar from "./components/navbar";
-import Political from "./components/landing-page/political-c";
 import ContinuousSlider from "./components/landing-page/services-slider";
 import Contact from "./components/landing-page/contact";
 import SliderComponent from "./components/landing-page/slider";
-import { Box } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
+import Political from "./components/landing-page/Political/politicalSlider";
+import PoliticalMain from "./components/landing-page/Political";
 
 function App() {
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
   return (
     <div className="App">
       <Box sx={{ position: "fixed", zIndex: 999999 }}>
@@ -17,7 +20,15 @@ function App() {
       <LandingPage />
 
       <section id="political" className="section">
-        <Political />
+        <Typography
+          variant={isMobile ? "h5" : "h4"}
+          fontWeight={600}
+          mb={2}
+          color={"#004c3d"}
+        >
+          Use Cases For Political Campaigns
+        </Typography>
+        <PoliticalMain />
         {/* Add content for Political Campaigns */}
       </section>
       <section id="retail" className="section">

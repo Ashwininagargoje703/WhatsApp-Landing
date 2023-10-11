@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Grid, Paper, Typography, useMediaQuery } from "@mui/material";
 
 const data = [
   {
@@ -23,9 +23,16 @@ const data = [
 ];
 
 const SliderComponent = () => {
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
   return (
     <>
-      <Typography variant="h4" color={"#004c3d"} fontWeight={600}>
+      <Typography
+        variant={isMobile ? "h5" : "h4"}
+        color={"#004c3d"}
+        fontWeight={600}
+        mb={4}
+      >
         For Retail Businesses
       </Typography>
       <Grid container spacing={2}>
@@ -38,8 +45,8 @@ const SliderComponent = () => {
                 style={{ maxWidth: "100%", height: "300px" }}
               />
               <Typography
-                fontSize={16}
-                fontWeight={600}
+                fontSize={18}
+                fontWeight={700}
                 color={"#004c3d"}
                 mt={1}
               >

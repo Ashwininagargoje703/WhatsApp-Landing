@@ -43,7 +43,12 @@ const ContinuousSlider = () => {
 
   return (
     <Container>
-      <Typography variant="h4" color={"#004c3d"} fontWeight={600} mt={2}>
+      <Typography
+        variant={isMobile ? "h5" : "h4"}
+        color={"#004c3d"}
+        fontWeight={600}
+        mt={2}
+      >
         Features of our WhatsApp Bot Services
       </Typography>
       <br />
@@ -80,11 +85,11 @@ const ContinuousSlider = () => {
       </div>
       <div
         style={{
-          display: "flex",
+          display: isMobile ? "grid" : "flex",
           justifyContent: "center",
           textAlign: "center",
-          marginTop: 20,
-          gap: 130,
+          marginTop: isMobile ? "" : 20,
+          gap: isMobile ? "20px" : 130,
         }}
       >
         {Data.slice(3).map((item, index) => (

@@ -52,7 +52,11 @@ const Contact = () => {
 
   return (
     <>
-      <Typography variant="h4" color={"#004c3d"} fontWeight={600}>
+      <Typography
+        variant={isMobile ? "h5" : "h4"}
+        color={"#004c3d"}
+        fontWeight={600}
+      >
         Contact Us
       </Typography>
 
@@ -71,7 +75,8 @@ const Contact = () => {
           style={{
             alignItems: "center",
             display: "flex",
-            marginTop: isMobile ? "" : -100,
+            justifyContent: "center",
+            marginTop: isMobile ? -30 : -100,
           }}
         >
           <Box p={4}>
@@ -85,7 +90,7 @@ const Contact = () => {
                 required
                 style={{
                   backgroundColor: "white",
-                  width: isMobile ? "" : 550,
+                  width: isMobile ? 300 : 550,
                 }}
               />
               <br />
@@ -99,7 +104,7 @@ const Contact = () => {
                 required
                 style={{
                   backgroundColor: "white",
-                  width: isMobile ? "" : 550,
+                  width: isMobile ? 300 : 550,
                 }}
               />
               <br />
@@ -113,7 +118,7 @@ const Contact = () => {
                 required
                 style={{
                   backgroundColor: "white",
-                  width: isMobile ? "" : 550,
+                  width: isMobile ? 300 : 550,
                 }}
               />
               <br />

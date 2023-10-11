@@ -89,7 +89,7 @@ function DrawerAppBar(props) {
       sx={{
         display: "flex",
         backgroundColor: "#004c3d",
-        width: "99vw",
+        width: "100vw",
       }}
     >
       <CssBaseline />
@@ -101,7 +101,7 @@ function DrawerAppBar(props) {
           onClick={handleDrawerToggle}
           sx={{ mr: 2, display: { sm: "none" } }}
         >
-          <MenuIcon />
+          <MenuIcon style={{ color: "white" }} />
         </IconButton>
 
         <Box sx={{ display: { xs: "none", sm: "block" } }}>
