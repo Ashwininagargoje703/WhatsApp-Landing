@@ -25,41 +25,91 @@ const data = [
 const SliderComponent = () => {
   const isMobile = useMediaQuery("(max-width: 600px)");
 
+  const background = isMobile ? (
+    <Grid container>
+      <Grid item xs={12} md={6} mt={4}>
+        <img
+          src="https://i.ibb.co/YRTjk3p/Untitled-design-1-removebg-preview.png"
+          alt="WhatsApp Bot Image"
+          style={{ maxWidth: "100%" }}
+        />
+
+        {data.map((item, index) => (
+          <Box
+            mb={6}
+            sx={{
+              minWidth: isMobile ? "" : 500,
+            }}
+          >
+            <Typography fontSize={24} fontWeight={700} color={"#004c3d"} mt={1}>
+              {item.h1}
+            </Typography>
+            <Typography
+              variant="body2"
+              mt={1}
+              sx={{
+                textAlign: "center",
+                justifyContent: "center",
+                fontSize: 16,
+              }}
+            >
+              {item.text}
+            </Typography>
+          </Box>
+        ))}
+      </Grid>
+    </Grid>
+  ) : (
+    <Grid container justifyContent={"space-between"} display={"flex"}>
+      <Grid item xs={12} md={6}>
+        <img
+          src="https://i.ibb.co/YRTjk3p/Untitled-design-1-removebg-preview.png"
+          alt="WhatsApp Bot Image"
+          style={{ maxWidth: "100%" }}
+        />
+      </Grid>
+
+      <Grid item xs={12} md={6} lg={3} mt={isMobile ? "" : 4}>
+        {data.map((item, index) => (
+          <Box mb={6} ml={-40}>
+            <Typography fontSize={24} fontWeight={700} color={"#004c3d"} mt={1}>
+              {item.h1}
+            </Typography>
+            <Typography
+              variant="body2"
+              mt={1}
+              sx={{
+                textAlign: "center",
+                justifyContent: "center",
+                fontSize: 16,
+              }}
+            >
+              {item.text}
+            </Typography>
+          </Box>
+        ))}
+      </Grid>
+    </Grid>
+  );
   return (
-    <>
+    <div
+      style={{
+        padding: "20px",
+
+        backgroundSize: isMobile ? "80vw 60vh" : "80vw 110vh",
+        backgroundPosition: "right top",
+      }}
+    >
       <Typography
         variant={isMobile ? "h5" : "h4"}
-        color={"#004c3d"}
         fontWeight={600}
-        mb={4}
+        mb={2}
+        color={"#004c3d"}
       >
         For Retail Businesses
       </Typography>
-      <Grid container spacing={2}>
-        {data.map((item, index) => (
-          <Grid item xs={12} sm={4} key={index}>
-            <Box p={2} minHeight={250}>
-              <img
-                src={item.imgSrc}
-                alt={`Box ${index + 1}`}
-                style={{ maxWidth: "100%", height: "300px" }}
-              />
-              <Typography
-                fontSize={18}
-                fontWeight={700}
-                color={"#004c3d"}
-                mt={1}
-              >
-                {item.h1}
-              </Typography>
-              <Typography variant="body2" mt={1}>
-                {item.text}
-              </Typography>
-            </Box>
-          </Grid>
-        ))}
-      </Grid>
-    </>
+      {background}
+    </div>
   );
 };
 

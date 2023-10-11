@@ -110,6 +110,9 @@ function PoliticalMain() {
         backgroundPosition: "right top",
       }}
     >
+      <Typography variant={isMobile ? "h5" : "h4"} fontWeight={600} mb={2}>
+        Use Cases For Political Campaigns
+      </Typography>
       {background}
     </div>
   );

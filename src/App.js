@@ -20,14 +20,6 @@ function App() {
       <LandingPage />
 
       <section id="political" className="section">
-        <Typography
-          variant={isMobile ? "h5" : "h4"}
-          fontWeight={600}
-          mb={2}
-          color={"#004c3d"}
-        >
-          Use Cases For Political Campaigns
-        </Typography>
         <PoliticalMain />
         {/* Add content for Political Campaigns */}
       </section>
