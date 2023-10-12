@@ -72,7 +72,7 @@ function PoliticalMain() {
     <Grid container justifyContent={"space-between"} display={"flex"}>
       <Grid item xs={12} md={6} lg={3}>
         {data.map((item, index) => (
-          <Box mb={6} ml={5} minWidth={500}>
+          <Box mb={6} ml={25} minWidth={500}>
             <Typography fontSize={24} fontWeight={700} color={"white"} mt={1}>
               {item.h1}
             </Typography>
@@ -113,6 +113,8 @@ function PoliticalMain() {
       <Typography variant={isMobile ? "h5" : "h4"} fontWeight={600} mb={2}>
         Use Cases For Political Campaigns
       </Typography>
+      <br />
+      <br />
       {background}
     </div>
   );

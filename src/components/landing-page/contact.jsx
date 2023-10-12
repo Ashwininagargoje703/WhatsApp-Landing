@@ -124,7 +124,7 @@ const Contact = () => {
               <br />
               <br />
               <TextField
-                label="Feedback"
+                label="Message"
                 variant="outlined"
                 size="small"
                 multiline

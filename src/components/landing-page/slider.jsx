@@ -71,7 +71,7 @@ const SliderComponent = () => {
 
       <Grid item xs={12} md={6} lg={3} mt={isMobile ? "" : 4}>
         {data.map((item, index) => (
-          <Box mb={6} ml={-40}>
+          <Box mb={6} ml={-70}>
             <Typography fontSize={24} fontWeight={700} color={"#004c3d"} mt={1}>
               {item.h1}
             </Typography>
@@ -106,6 +106,7 @@ const SliderComponent = () => {
       >
         For Retail Businesses
       </Typography>
+      <br />
       {background}
     </div>
   );
