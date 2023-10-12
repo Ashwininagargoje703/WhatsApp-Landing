@@ -95,9 +95,7 @@ const SliderComponent = () => {
     <div
       style={{
         padding: "20px",
-
         backgroundSize: isMobile ? "80vw 60vh" : "80vw 110vh",
-        backgroundPosition: "right top",
       }}
     >
       <Typography

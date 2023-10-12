@@ -23,6 +23,8 @@ function LandingPage() {
         style={{
           alignItems: "center",
           display: "flex",
+          justifyContent: "center",
+          textAlign: "center",
         }}
       >
         <Box p={4}>
@@ -30,14 +32,16 @@ function LandingPage() {
             variant="h5"
             fontWeight={600}
             color={"#004c3d"}
-            fontSize={30}
+            fontSize={32}
           >
-            WhatsApp Bot + Chat GPT
+            Custom WhatsApp Bots + Chat GPT
           </Typography>
           <br />
 
           <Typography fontSize={18}>
-            Elevate Your Campaign or Business with Custom WhatsApp Bots Custom
+            We craft robust and user-friendly WhatsApp bots designed to connect
+            with your audience, streamline operations, and drive tangible
+            results.
           </Typography>
 
           <br />
@@ -66,9 +70,13 @@ function LandingPage() {
         item
         xs={12}
         md={6}
+        mt={7}
         style={{
           alignItems: "center",
           display: "flex",
+          justifyContent: "center",
+          textAlign: "center",
+          alignSelf: "center",
         }}
       >
         <Box p={4}>
@@ -78,12 +86,14 @@ function LandingPage() {
             color={"#004c3d"}
             fontSize={42}
           >
-            WhatsApp Bot + Chat GPT
+            Custom WhatsApp Bots + Chat GPT
           </Typography>
           <br />
 
           <Typography fontSize={18}>
-            Elevate Your Campaign or Business with Custom WhatsApp Bots Custom
+            We craft robust and user-friendly WhatsApp bots designed to connect
+            with your audience, streamline operations, and drive tangible
+            results.
           </Typography>
 
           <br />
