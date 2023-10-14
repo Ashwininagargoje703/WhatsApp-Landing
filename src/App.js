@@ -8,9 +8,30 @@ import SliderComponent from "./components/landing-page/slider";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import Political from "./components/landing-page/Political/politicalSlider";
 import PoliticalMain from "./components/landing-page/Political";
+import { useEffect } from "react";
 
 function App() {
-  const isMobile = useMediaQuery("(max-width: 600px)");
+  useEffect(() => {
+    const sections = document.querySelectorAll(".section");
+
+    const handleScroll = () => {
+      sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top <= window.innerHeight) {
+          section.classList.add("show");
+        } else {
+          section.classList.remove("show");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="App">
@@ -19,22 +40,17 @@ function App() {
       </Box>
       <LandingPage />
 
-      <section id="political" className="section">
+      <section id="political" className="section fade-in">
         <PoliticalMain />
-        {/* Add content for Political Campaigns */}
       </section>
-      <section id="retail" className="section">
+      <section id="retail" className="section fade-in">
         <SliderComponent />
-
-        {/* Add content for Retail Businesses */}
       </section>
-      <section id="features" className="section">
-        {/* Add content for Features */}
+      <section id="features" className="section fade-in">
         <ContinuousSlider />
       </section>
-      <section id="contact" className="section">
+      <section id="contact" className="section fade-in">
         <Contact />
-        {/* Add content for Contact */}
       </section>
       <Footer />
     </div>
