@@ -63,9 +63,9 @@ const Contact = () => {
       <Grid container>
         <Grid item xs={12} md={6} mt={4}>
           <img
-            src="https://lotusschool.in/wp-content/uploads/2020/01/contactus-768x630.png"
+            src="https://i.ibb.co/qrPfPps/contact-us1.png"
             alt="WhatsApp Bot Image"
-            style={{ maxWidth: "100%", maxHeight: "80%" }}
+            style={{ maxWidth: "100%", maxHeight: "70%" }}
           />
         </Grid>
         <Grid
@@ -76,7 +76,7 @@ const Contact = () => {
             alignItems: "center",
             display: "flex",
             justifyContent: "center",
-            marginTop: isMobile ? -30 : -100,
+            marginTop: isMobile ? -30 : -200,
           }}
         >
           <Box p={4}>
@@ -84,7 +84,6 @@ const Contact = () => {
               <TextField
                 label="User Name (Required)"
                 variant="outlined"
-                size="small"
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
                 required
@@ -98,7 +97,6 @@ const Contact = () => {
               <TextField
                 label="Email  (Required)"
                 variant="outlined"
-                size="small"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -112,7 +110,6 @@ const Contact = () => {
               <TextField
                 label="Phone Number  (Required)"
                 variant="outlined"
-                size="small"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 required
@@ -126,7 +123,6 @@ const Contact = () => {
               <TextField
                 label="Message"
                 variant="outlined"
-                size="small"
                 multiline
                 value={feedback}
                 onChange={(e) => setFeedback(e.target.value)}

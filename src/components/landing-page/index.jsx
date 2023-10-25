@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Box, Button, TextField, useMediaQuery } from "@mui/material";
+import main from "../../assest/main.png";
 
 function LandingPage() {
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -117,7 +118,7 @@ function LandingPage() {
       {/* Right Side */}
       <Grid item xs={12} md={6} mt={7}>
         <img
-          src="https://i.ibb.co/fNYcx88/Whats-App-Image-2023-10-11-at-11-34-50-AM-removebg-preview.png"
+          src={main}
           alt="WhatsApp Bot Image"
           style={{ maxWidth: "100%", height: 400 }}
         />

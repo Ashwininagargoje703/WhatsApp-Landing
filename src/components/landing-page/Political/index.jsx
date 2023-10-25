@@ -106,7 +106,7 @@ function PoliticalMain() {
         padding: "20px",
         backgroundColor: "#004c3d",
         color: "white",
-        backgroundSize: isMobile ? "80vw 60vh" : "80vw 110vh",
+        backgroundSize: isMobile ? "80vw 60vh" : "80vw ",
         backgroundPosition: "right top",
       }}
     >
